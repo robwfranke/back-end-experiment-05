@@ -11,3 +11,7 @@ INSERT INTO authorities (username, authority) VALUES ('peter', 'ROLE_ADMIN');
 
 
 INSERT INTO customers (customername, password,email, enabled) VALUES ('klant nr 1', '$2a$10$wPHxwfsfTnOJAdgYcerBt.utdAvC24B/DWfuXfzKBSDHO0etB1ica','klant@klant', TRUE);
+
+
+
+INSERT INTO orders (ordername, dwgnumber) VALUES ('order1', 'dwg1');
