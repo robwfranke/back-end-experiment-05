@@ -15,3 +15,8 @@ INSERT INTO customers (customername, password,email, enabled) VALUES ('klant nr 
 
 
 INSERT INTO orders (ordername, dwgnumber) VALUES ('order1', 'dwg1');
+
+
+INSERT INTO lines (Line_number, bewerking) VALUES ('1001', 'draaien');
+
+
