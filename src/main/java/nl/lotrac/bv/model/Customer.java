@@ -13,16 +13,31 @@ public class Customer {
     private String customername;
 
     @Column(nullable = false, length = 255)
+    private String street;
+
+    @Column(nullable = false, length = 255)
+    private String city;
+
+    @Column(nullable = false, length = 255)
+    private String postal_code;
+
+    @Column
+    private String email;
+
+    @Column(nullable = false, length = 255)
+    private String tel_number;
+
+    @Column(nullable = false, length = 255)
     private String password;
 
     @Column(nullable = false)
     private boolean enabled = true;
 
+
+    //  waarom is dat nodig????
     @Column
     private String apikey;
 
-    @Column
-    private String email;
 
 //    @OneToMany(
 //            targetEntity = Authority.class,

@@ -10,21 +10,22 @@ INSERT INTO authorities (username, authority) VALUES ('peter', 'ROLE_USER');
 INSERT INTO authorities (username, authority) VALUES ('peter', 'ROLE_ADMIN');
 
 
-INSERT INTO customers (customername, password,email, enabled) VALUES ('klant nr 1', '$2a$10$wPHxwfsfTnOJAdgYcerBt.utdAvC24B/DWfuXfzKBSDHO0etB1ica','klant@klant', TRUE);
-INSERT INTO customers (customername, password,email, enabled) VALUES ('klant nr 2', '$2a$10$wPHxwfsfTnOJAdgYcerBt.utdAvC24B/DWfuXfzKBSDHO0etB1ica','klant@klant', TRUE);
-INSERT INTO customers (customername, password,email, enabled) VALUES ('klant nr 3', '$2a$10$wPHxwfsfTnOJAdgYcerBt.utdAvC24B/DWfuXfzKBSDHO0etB1ica','klant@klant', TRUE);
-INSERT INTO customers (customername, password,email, enabled) VALUES ('klant nr 4', '$2a$10$wPHxwfsfTnOJAdgYcerBt.utdAvC24B/DWfuXfzKBSDHO0etB1ica','klant@klant', TRUE);
+INSERT INTO customers (customername, street,city, postal_code,email, tel_number,password, enabled) VALUES ('klant nr 1', 'hazenpad 1','Rotterdam', '1234AN', 'klant1@klant','0612345','$2a$10$wPHxwfsfTnOJAdgYcerBt.utdAvC24B/DWfuXfzKBSDHO0etB1ica', TRUE);
+INSERT INTO customers (customername, street,city, postal_code,email, tel_number,password, enabled) VALUES ('klant nr 2', 'konijn 1','Amsterdam', '5378AN', 'klant2@klant','0636545','$2a$10$wPHxwfsfTnOJAdgYcerBt.utdAvC24B/DWfuXfzKBSDHO0etB1ica', TRUE);
+INSERT INTO customers (customername, street,city, postal_code,email, tel_number,password, enabled) VALUES ('klant nr 3', 'paard 1','Rotterdam', '1357AN', 'klant3@klant','069684345','$2a$10$wPHxwfsfTnOJAdgYcerBt.utdAvC24B/DWfuXfzKBSDHO0etB1ica', TRUE);
+INSERT INTO customers (customername, street,city, postal_code,email, tel_number,password, enabled) VALUES ('klant nr 4', 'koe 1','Amsterdam', '7913AN', 'klant4@klant','089745','$2a$10$wPHxwfsfTnOJAdgYcerBt.utdAvC24B/DWfuXfzKBSDHO0etB1ica', TRUE);
 
 
 
-INSERT INTO orders (ordername, dwgnumber) VALUES ('order1', 'dwg1');
-INSERT INTO orders (ordername, dwgnumber) VALUES ('order2', 'dwg2');
-INSERT INTO orders (ordername, dwgnumber) VALUES ('order3', 'dwg3');
-INSERT INTO orders (ordername, dwgnumber) VALUES ('order4', 'dwg4');
+
+INSERT INTO orders (orderdate, status) VALUES ('order1', 'open');
+INSERT INTO orders (orderdate, status) VALUES ('order2', 'open');
+INSERT INTO orders (orderdate, status) VALUES ('order3', 'pending');
+INSERT INTO orders (orderdate, status) VALUES ('order4', 'closed');
 
 
-INSERT INTO lines (Line_number, bewerking) VALUES ('1001', 'draaien');
-INSERT INTO lines (Line_number, bewerking) VALUES ('2001', 'frezen');
-INSERT INTO lines (Line_number, bewerking) VALUES ('3001', 'klinken');
+INSERT INTO order_lines (dwg_number, quantity) VALUES ('1001', '10');
+INSERT INTO order_lines (dwg_number, quantity) VALUES ('2001', '1');
+INSERT INTO order_lines (dwg_number, quantity) VALUES ('3001', '3');
 
 

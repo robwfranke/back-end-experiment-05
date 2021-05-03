@@ -12,24 +12,24 @@ public class Order {
 
     @Id
     @Column(nullable = false, unique = true)
-    private String ordername;
+    private String orderdate;
 
     @Column(nullable = false, length = 255)
-    private String dwgnumber;
+    private String status;
 
-    public String getOrdername() {
-        return ordername;
+    public String getOrderdate() {
+        return orderdate;
     }
 
-    public void setOrdername(String ordername) {
-        this.ordername = ordername;
+    public void setOrderdate(String orderdate) {
+        this.orderdate = orderdate;
     }
 
-    public String getDwgnumber() {
-        return dwgnumber;
+    public String getStatus() {
+        return status;
     }
 
-    public void setDwgnumber(String dwgnumber) {
-        this.dwgnumber = dwgnumber;
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

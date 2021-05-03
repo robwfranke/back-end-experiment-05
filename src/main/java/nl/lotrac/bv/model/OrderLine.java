@@ -5,29 +5,30 @@ import javax.persistence.*;
 
 
 @Entity
-@Table(name = "lines")
+@Table(name = "order_lines")
 public class OrderLine {
 
     @Id
     @Column(nullable = false, unique = true)
-    private String line_number;
+    private String dwg_number;
 
     @Column(nullable = false, length = 255)
-    private String bewerking;
+    private String quantity;
 
-    public String getLine_number() {
-        return line_number;
+    public String getDwg_number() {
+        return dwg_number;
     }
 
-    public void setLine_number(String line_number) {
-        this.line_number = line_number;
+    public void setDwg_number(String dwg_number) {
+        this.dwg_number = dwg_number;
     }
 
-    public String getBewerking() {
-        return bewerking;
+    public String getQuantity() {
+        return quantity;
     }
 
-    public void setBewerking(String bewerking) {
-        this.bewerking = bewerking;
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
     }
 }
+
