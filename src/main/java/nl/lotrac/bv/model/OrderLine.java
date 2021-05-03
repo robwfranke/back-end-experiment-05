@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "lines")
-public class Line {
+public class OrderLine {
 
     @Id
     @Column(nullable = false, unique = true)
