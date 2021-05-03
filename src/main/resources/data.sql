@@ -29,3 +29,8 @@ INSERT INTO order_lines (dwg_number, quantity) VALUES ('2001', '1');
 INSERT INTO order_lines (dwg_number, quantity) VALUES ('3001', '3');
 
 
+INSERT INTO jobs (job_name, department) VALUES ('voordraaien', 'draai afdeling');
+INSERT INTO jobs (job_name, department) VALUES ('nadraaien', 'draai afdeling');
+INSERT INTO jobs (job_name, department) VALUES ('voorfrezen', 'frees afdeling');
+INSERT INTO jobs (job_name, department) VALUES ('nafrezen', 'frees afdeling');
+INSERT INTO jobs (job_name, department) VALUES ('slijpen', 'slijp afdeling');
