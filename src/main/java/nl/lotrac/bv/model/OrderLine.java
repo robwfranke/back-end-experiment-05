@@ -9,11 +9,20 @@ import javax.persistence.*;
 public class OrderLine {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+    //    @Id
     @Column(nullable = false, unique = true)
     private String dwg_number;
 
     @Column(nullable = false, length = 255)
     private String quantity;
+
+
+
+
+//    @ManyToOne
+//    OrderLine orderLine;
 
     public String getDwg_number() {
         return dwg_number;

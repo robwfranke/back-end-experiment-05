@@ -2,13 +2,20 @@ package nl.lotrac.bv.model;
 
 import javax.persistence.*;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
 @Table(name = "customers")
 public class Customer {
 
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
+
+//    @Id
     @Column(nullable = false, unique = true)
     private String customername;
 
@@ -32,6 +39,14 @@ public class Customer {
 
     @Column(nullable = false)
     private boolean enabled = true;
+
+//    customer haalt spring uit veld customer in de @MayToOne in order
+//
+//    @ManyToOne
+//    Customer customer;
+//
+    @OneToMany (mappedBy = "customer")
+    List<Order> orders;
 
 
     //  waarom is dat nodig????

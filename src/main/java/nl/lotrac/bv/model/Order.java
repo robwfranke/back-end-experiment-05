@@ -1,21 +1,32 @@
 package nl.lotrac.bv.model;
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "orders")
 public class Order {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
+
+//    @Id
     @Column(nullable = false, unique = true)
     private String orderdate;
 
     @Column(nullable = false, length = 255)
     private String status;
+
+
+    @ManyToOne
+    Customer customer;
+
+
+//    @OneToMany (mappedBy = "orderline")
+//    List<OrderLine> orderLines;
 
     public String getOrderdate() {
         return orderdate;
