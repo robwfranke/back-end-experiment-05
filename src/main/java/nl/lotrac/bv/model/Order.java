@@ -13,7 +13,7 @@ public class Order {
     private long id;
 
 
-//    @Id
+    //    @Id
     @Column(nullable = false, unique = true)
     private String orderdate;
 
@@ -24,9 +24,10 @@ public class Order {
     @ManyToOne
     Customer customer;
 
+    @OneToMany(mappedBy = "order")
+    List<OrderLine> orderlines;
 
-//    @OneToMany (mappedBy = "orderline")
-//    List<OrderLine> orderLines;
+
 
     public String getOrderdate() {
         return orderdate;

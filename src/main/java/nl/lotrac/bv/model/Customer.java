@@ -53,7 +53,7 @@ public class Customer {
     @Column
     private String apikey;
 
-
+//  waarom staat onderstaande erin??
 //    @OneToMany(
 //            targetEntity = Authority.class,
 //            mappedBy = "username",

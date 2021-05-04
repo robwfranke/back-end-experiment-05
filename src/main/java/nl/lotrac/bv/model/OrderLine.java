@@ -19,10 +19,8 @@ public class OrderLine {
     private String quantity;
 
 
-
-
-//    @ManyToOne
-//    OrderLine orderLine;
+    @ManyToOne
+    Order order;
 
     public String getDwg_number() {
         return dwg_number;

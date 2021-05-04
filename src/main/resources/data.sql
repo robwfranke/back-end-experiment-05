@@ -18,10 +18,10 @@ INSERT INTO customers (customername, street,city, postal_code,email, tel_number,
 
 
 
-INSERT INTO orders (orderdate, status) VALUES ('order1', 'open');
-INSERT INTO orders (orderdate, status) VALUES ('order2', 'open');
-INSERT INTO orders (orderdate, status) VALUES ('order3', 'pending');
-INSERT INTO orders (orderdate, status) VALUES ('order4', 'closed');
+INSERT INTO orders (orderdate, status, customer_id) VALUES ('order1', 'open','2');
+INSERT INTO orders (orderdate, status, customer_id) VALUES ('order2', 'open','2');
+INSERT INTO orders (orderdate, status, customer_id) VALUES ('order3', 'pending','3');
+INSERT INTO orders (orderdate, status, customer_id) VALUES ('order4', 'closed','1');
 
 
 INSERT INTO order_lines (dwg_number, quantity) VALUES ('1001', '10');
