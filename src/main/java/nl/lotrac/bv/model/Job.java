@@ -19,6 +19,10 @@ public class Job {
     @Column(nullable = false, length = 255)
     private String department;
 
+    @ManyToOne
+    OrderLine orderLine;
+
+
     public String getJob_name() {
         return job_name;
     }

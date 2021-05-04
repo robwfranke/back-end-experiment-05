@@ -2,10 +2,11 @@ package nl.lotrac.bv.model;
 
 
 import javax.persistence.*;
+import java.util.List;
 
 
 @Entity
-@Table(name = "order_lines")
+@Table(name = "orderLines")
 public class OrderLine {
 
     @Id
@@ -21,6 +22,12 @@ public class OrderLine {
 
     @ManyToOne
     Order order;
+
+    @OneToMany(mappedBy = "orderLine")
+    List<Job> jobs;
+
+
+
 
     public String getDwg_number() {
         return dwg_number;
