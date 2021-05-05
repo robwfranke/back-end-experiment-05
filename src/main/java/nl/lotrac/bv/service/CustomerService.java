@@ -10,8 +10,10 @@ import java.util.Set;
 public interface CustomerService {
 
 
-
     public abstract Collection<Customer> getCustomers();
+
+    public abstract Customer getCustomer(Long id);
+
 
 //
 //
