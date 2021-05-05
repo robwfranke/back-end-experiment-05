@@ -25,6 +25,8 @@ public class CustomerServiceImpl implements CustomerService {
 
 @Override
     public Customer getCustomer(Long id) {
+
+    System.out.println("CustomerServiceImpl");
         Optional<Customer> customer = customerRepository.findById(id);
         if (customer.isEmpty()) {
             throw new RecordNotFoundException();

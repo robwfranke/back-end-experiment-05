@@ -20,13 +20,14 @@ INSERT INTO customers (customername, street,city, postal_code,email, tel_number,
 
 INSERT INTO orders (orderdate, status, customer_id) VALUES ('order1', 'open','2');
 INSERT INTO orders (orderdate, status, customer_id) VALUES ('order2', 'open','2');
-INSERT INTO orders (orderdate, status, customer_id) VALUES ('order3', 'pending','3');
+INSERT INTO orders (orderdate, status, customer_id) VALUES ('order3', 'pending','2');
 INSERT INTO orders (orderdate, status, customer_id) VALUES ('order4', 'closed','1');
 
 
-INSERT INTO order_lines (dwg_number, quantity) VALUES ('1001', '10');
-INSERT INTO order_lines (dwg_number, quantity) VALUES ('2001', '1');
-INSERT INTO order_lines (dwg_number, quantity) VALUES ('3001', '3');
+INSERT INTO order_lines (dwg_number, quantity,order_id) VALUES ('1001', '10','2');
+INSERT INTO order_lines (dwg_number, quantity,order_id) VALUES ('2001', '1','1');
+INSERT INTO order_lines (dwg_number, quantity,order_id) VALUES ('3001', '3','2');
+INSERT INTO order_lines (dwg_number, quantity,order_id) VALUES ('4001', '3','2');
 
 
 INSERT INTO jobs (job_name, department) VALUES ('voordraaien', 'draai afdeling');
@@ -34,3 +35,9 @@ INSERT INTO jobs (job_name, department) VALUES ('nadraaien', 'draai afdeling');
 INSERT INTO jobs (job_name, department) VALUES ('voorfrezen', 'frees afdeling');
 INSERT INTO jobs (job_name, department) VALUES ('nafrezen', 'frees afdeling');
 INSERT INTO jobs (job_name, department) VALUES ('slijpen', 'slijp afdeling');
+
+
+INSERT INTO couple_orderline_jobs (order_line_id, jobs_id) VALUES ('1', '1');
+INSERT INTO couple_orderline_jobs (order_line_id, jobs_id) VALUES ('1', '2');
+INSERT INTO couple_orderline_jobs (order_line_id, jobs_id) VALUES ('1', '3');
+INSERT INTO couple_orderline_jobs (order_line_id, jobs_id) VALUES ('1', '4');
