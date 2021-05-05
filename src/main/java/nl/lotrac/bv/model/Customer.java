@@ -44,17 +44,12 @@ public class Customer {
 //
 //    @ManyToOne
 //    Customer customer;
+
+//    Vegeet niet getter en setter van List<Order> aan te maken
 //
+
     @OneToMany (mappedBy = "customer", fetch = FetchType.EAGER)
     List<Order> orders;
-
-    public List<Order> getOrders() {
-        return orders;
-    }
-
-    public void setOrders(List<Order> orders) {
-        this.orders = orders;
-    }
 
     //  waarom is dat nodig????
     @Column
@@ -108,4 +103,15 @@ public class Customer {
     public void setEmail(String email) {
         this.email = email;
     }
+
+
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
+    }
+
+
 }

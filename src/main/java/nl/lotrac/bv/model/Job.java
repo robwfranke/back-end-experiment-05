@@ -2,6 +2,8 @@ package nl.lotrac.bv.model;
 
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "jobs")
@@ -19,9 +21,21 @@ public class Job {
     @Column(nullable = false, length = 255)
     private String department;
 
-    @ManyToOne
-    OrderLine orderLine;
 
+//    @ManyToOne
+//    OrderLine orderLine;
+
+
+    @ManyToMany(mappedBy = "koppel")
+    Set<OrderLine> likes = new HashSet<>();
+
+    public Set<OrderLine> getLikes() {
+        return likes;
+    }
+
+    public void setLikes(Set<OrderLine> likes) {
+        this.likes = likes;
+    }
 
     public String getJob_name() {
         return job_name;
