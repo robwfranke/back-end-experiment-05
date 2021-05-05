@@ -45,9 +45,16 @@ public class Customer {
 //    @ManyToOne
 //    Customer customer;
 //
-    @OneToMany (mappedBy = "customer")
+    @OneToMany (mappedBy = "customer", fetch = FetchType.EAGER)
     List<Order> orders;
 
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
+    }
 
     //  waarom is dat nodig????
     @Column

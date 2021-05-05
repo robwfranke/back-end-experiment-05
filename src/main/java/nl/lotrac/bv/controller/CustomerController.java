@@ -26,7 +26,10 @@ public class CustomerController {
     public ResponseEntity<Object>getCustomers(){
         return ResponseEntity.ok().body(customerService.getCustomers());
     }
-@GetMapping(value = "/{id}")
+
+
+
+    @GetMapping(value = "/{id}")
     public ResponseEntity<Object>getOneCustomer(@PathVariable("id")Long id){
       return new ResponseEntity<>(customerService.getCustomer(id),HttpStatus.OK) ;
 
